@@ -14,7 +14,7 @@ export default function App() {
   const loadAllTodos = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/agent",
+        "https://ai-base-todo-app.vercel.app/api/agent",
         { message: "show all todos" }
       );
       setResults(res.data.results || []);
@@ -30,7 +30,7 @@ export default function App() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/agent",
+        "https://ai-base-todo-app.vercel.app/api/agent",
         { message }
       );
 
